@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+// @import "./../public/fellix/fellix-font.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("/images/Background.png");
+  background-size: cover;
+  font-family: "Fellix", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.Button {
+  @apply w-[11.69rem] h-12 rounded-[40px] font-semibold bg-[#21AD71];
+  &.contained {
+    @apply text-white;
+  }
+  &.outlined {
+    @apply border;
+  }
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.thead {
+  @apply grid grid-cols-[0.5fr,1fr,1.5fr,1.5fr,1.5fr,1.5fr] border-b-[1px];
+}
+
+.tbody {
+  @apply text-center p-3 text-lg border-r-[1px];
+}
+
+@tailwind utilities;
